@@ -4,13 +4,14 @@
 @homepage : https://github.com/gusdnd852
 """
 import spacy
-
+import en_core_web_sm
+import de_core_news_sm
 
 class Tokenizer:
 
     def __init__(self):
-        self.spacy_de = spacy.load('de_core_news_sm')
-        self.spacy_en = spacy.load('en_core_web_sm')
+        self.spacy_de = de_core_news_sm.load()
+        self.spacy_en = en_core_web_sm.load()
 
     def tokenize_de(self, text):
         """
